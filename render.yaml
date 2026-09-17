@@ -2,5 +2,6 @@ services:
   - type: web
     name: shazam-bot
     env: python
-    buildCommand: "apt-get update && apt-get install -y curl && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && export PATH='$HOME/.cargo/bin:$PATH' && pip install -r requirements.txt"
+    buildCommand: "apt-get update && apt-get install -y curl && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && export RUSTUP_HOME='$HOME/.rustup' && export CARGO_HOME='$HOME/.cargo' && export PATH='$HOME/.cargo/bin:$PATH' && pip install -r requirements.txt"
     startCommand: "python main.py"
+
