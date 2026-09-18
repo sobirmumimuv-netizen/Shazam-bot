@@ -51,8 +51,9 @@ def handle_audio(message):
         else:
             bot.edit_message_text("Afsuski, bu qo'shiqni topa olmadim.", message.chat.id, msg.message_id)
             
-    except Exception as e:
-        bot.edit_message_text("Xatolik yuz berdi, qaytadan urinib ko'ring.", message.chat.id, msg.message_id)
+   except Exception as e:
+    print(f"Xatolik yuz berdi: {e}")
+    bot.reply_to(message, f"Xatolik yuz berdi!")
     finally:
         if file_path and os.path.exists(file_path):
             os.remove(file_path)
