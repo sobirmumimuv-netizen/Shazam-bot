@@ -17,7 +17,7 @@ def run_flask():
     app.run(host="0.0.0.0", port=port)
 
 # Telegram Bot
-BOT_TOKEN = "8601459584:AAFTq12n1AESw4lnl3i1h6ghuGmvF1mp6rI"
+BOT_TOKEN ="8601459584:AAGXPE6mjVIgFwChPuWSFKQXzE3Un-d3F8M"
 bot = telebot.TeleBot(BOT_TOKEN)
 shazam = Shazam()
 
